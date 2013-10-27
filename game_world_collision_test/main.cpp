@@ -51,7 +51,7 @@ int main(){
     RECT rectangle1{0, 20, 50, 70};
     RECT rectangle2{0, 20, 50, 70};
 
-    while(1){
+    while(!key[KEY_ESC]){
 
         if (key[KEY_UP]){
 
@@ -93,11 +93,6 @@ int main(){
             rectangle2.left++;
             rectangle2.right++;
         }
-        if(key[KEY_ESC]){
-
-            return 0;
-        }
-
 
 
         if (rectinrect(rectangle1, rectangle2)){
